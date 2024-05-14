@@ -1,0 +1,32 @@
+.account {
+
+    &__title {}
+
+    &__avatar {}
+
+    &__avatar-title {}
+
+    &__avatar-data {}
+
+    &__name-data {}
+
+    &__contact-data {}
+
+    &__notifications-title {}
+
+    &__notifications-list {
+
+        .notifications-list-left {}
+        .notifications-list-right {}
+    }
+
+    &__buttons {
+        .logout-btn {}
+        .changes-btn {
+            .discard-changes {}
+            .save-changes {}
+        }
+    }
+
+
+}

@@ -1,0 +1,90 @@
+.settings-container {
+    display: grid;
+    max-width: 1100rem;
+    margin-inline: auto;
+    grid-template-areas: 
+        "settings-title settings-detail-title"
+        "settings-list settings-detail";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 30rem;
+    row-gap: 16rem;
+    padding-top: 24rem;
+    border: 2px solid violet;
+
+    .settings-title {
+        grid-area: settings-title;
+        font-weight: 600;
+        font-size: 20rem;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: var(--text-main);
+    }
+
+    .settings-list {
+        grid-area: settings-list;
+        width: 350rem;
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+
+        .settings-item {
+            display: flex;
+            align-items: center;
+            gap: 12rem;
+            padding: 16rem;
+            max-width: 100%;
+            border-radius: 16rem;
+            border: 1px solid var(--light-grey);
+            background: var(--white);
+            cursor: pointer;
+            
+            &__ico {
+                border-radius: 12rem;
+                width: 40rem;
+                height: 40rem;
+                background: var(--light-grey);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__info {
+                
+            }
+
+            &__title {
+                font-weight: 700;
+                font-size: 14rem;
+                line-height: 143%;
+                letter-spacing: 0.01em;
+                color: var(--text-main);
+                margin-bottom: 2rem;
+            }
+
+            &__desc {
+                font-weight: 400;
+                font-size: 13rem;
+                line-height: 138%;
+                letter-spacing: 0.02em;
+                color: var(--text-second);
+            }
+
+        }
+    }
+
+    .settings-detail-title {
+        grid-area: settings-detail-title;
+        font-weight: 600;
+        font-size: 20rem;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: var(--text-main);
+    }
+    .settings-detail {
+        grid-area: settings-detail;
+        border: 1px solid var(--light-grey);
+        border-radius: 16px;
+        padding: 24rem 16rem 20rem;
+    }
+}

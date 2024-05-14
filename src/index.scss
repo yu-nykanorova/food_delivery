@@ -1,0 +1,17 @@
+//scss
+@import "scss/reset";
+@import "scss/vars";
+@import "scss/layout";
+
+//shared
+@import "shared/ui/Header/Header.scss";
+@import "shared/ui/Restaurant/Restaurant.scss";
+@import "shared/ui/Deal/Deal.scss";
+@import "shared/ui/Category/Category.scss";
+
+//pages
+@import "pages/home/Home.scss";
+@import "pages/login/Login.scss";
+@import "pages/settings/Settings.scss";
+@import "pages/settings/components/Account/Account.scss";
+

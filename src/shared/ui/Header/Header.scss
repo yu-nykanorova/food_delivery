@@ -1,0 +1,50 @@
+.header {
+    border-bottom: 1rem solid var(--light-grey);
+
+    .header-container {
+        padding: 16rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     	max-width: 1100rem;
+        margin-inline: auto;
+    }
+
+    &__logo {
+        margin-right: 48rem;
+    }
+
+    &__search {
+        margin-right: 370rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+    }
+
+    &__li {}
+
+    &__a {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.01em;
+        text-align: right;
+        color: var(--text-main);
+    }
+
+    &__cart {}
+
+    &__cart-count {}
+
+    &__avatar {}
+}

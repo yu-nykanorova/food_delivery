@@ -1,0 +1,24 @@
+.home-container {
+    max-width: 1100rem;
+    margin-inline: auto;
+
+    .restaurants {
+        margin-bottom: 121rem;
+        
+        &__title {
+            margin-bottom: 16rem;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+            color: var(--text-main);
+        }
+    
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(350rem, 1fr));
+            gap: 30rem;
+        }
+     }
+}
