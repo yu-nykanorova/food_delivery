@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export const Deal = ({deal}) => {
     return (
-        <div className="deal">
+        <Link to="/" className="deal">
             <div className="deal__image">
                 <img src={deal.image} alt={deal.title} />
             </div>
@@ -11,7 +12,7 @@ export const Deal = ({deal}) => {
                 <div className="deal__discount">{deal.discount}</div>
                 <div className="deal__category">{deal.category}</div>
             </div>
-        </div>
+        </Link>
     )
 }
 

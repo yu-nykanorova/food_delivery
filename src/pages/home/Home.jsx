@@ -9,9 +9,7 @@ import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const listDeals = deals.map((deal) => (
-    <Link key={deal.id} to="/">
-      <Deal deal={deal} />
-    </Link>
+    <Deal deal={deal} key={deal.id} />
   ));
 
   const listCategories = categories.map((category) => (

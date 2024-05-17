@@ -2,6 +2,20 @@
     max-width: 1100rem;
     margin-inline: auto;
 
+    .deals {
+        margin-top: 24rem;
+        margin-bottom: 32rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40rem;
+    }
+
     .restaurants {
         margin-bottom: 121rem;
         
@@ -17,7 +31,7 @@
     
         &__list {
             display: grid;
-            grid-template-columns: repeat(3, minmax(350rem, 1fr));
+            grid-template-columns: repeat(3, minmax(340rem, 1fr));
             gap: 30rem;
         }
      }

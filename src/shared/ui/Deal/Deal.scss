@@ -1,0 +1,47 @@
+.deal {
+    padding: 0 26rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16rem;
+    background: var(--light-blue);
+
+    &__image {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__info {}
+
+    &__title {
+        font-weight: 600;
+        font-size: 20rem;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: var(--text-main);
+        margin-bottom: 8rem;
+    }
+
+    &__discount {
+        font-weight: 800;
+        font-size: 40rem;
+        line-height: 140%;
+        color: var(--blue);
+        margin-bottom: 36rem;
+    }
+
+    &__category {
+        font-weight: 400;
+        font-size: 14rem;
+        line-height: 143%;
+        letter-spacing: 0.01em;
+        color: var(--text-third);
+    }
+
+    &:nth-child(even) {
+        background: var(--light-orange);
+        .deal__discount {
+            color: var(--orange);
+        }
+    }
+}

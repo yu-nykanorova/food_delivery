@@ -1,18 +1,110 @@
 .account {
 
-    &__title {}
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+        color: var(--text-mains);
+        margin-bottom: 16rem;
+    }
 
-    &__avatar {}
+    &__avatar {} 
 
-    &__avatar-title {}
+    &__avatar-title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+        color: var(--text-second);
+        margin-bottom: 8rem;
+    }
 
-    &__avatar-data {}
+    &__avatar-data {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16rem;
+        img {
+            margin-right: 24rem;
+            border-radius: 12rem;
+            width: 88rem;
+            height: 88rem;
+        }
+        #change, #remove {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.02em;
+            text-align: center;
+            padding: 12rem 16rem;
+            color: var(--text-third);
+            cursor: pointer;
+        }
+        #change {
+            margin-right: 15rem;
+            border: 1px solid var(--blue);
+            border-radius: 8rem;
+            color: var(--blue);
+        }
+    }
 
-    &__name-data {}
+    &__name-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16rem;
+        margin-bottom: 34rem;
+    }
 
-    &__contact-data {}
+    &__first-name, &__last-name, &__email, &__phone {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(50% - 8rem);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+        color: var(--text-second);
+        label {
+            margin-bottom: 4rem;
+        }
+        input {
+            border: 1px solid #c7c8d2;
+            border-radius: 8rem;
+            outline: 0;
+            padding: 12rem;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 143%;
+                letter-spacing: 0.01em;
+                color: var(--text-main);
+            }
+        }
+    }
 
-    &__notifications-title {}
+    &__first-name {}
+
+    &__last-name {}
+
+    &__contact-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16rem;
+        margin-bottom: 68rem;
+    }
+
+    &__email {}
+
+    &__phone {}
+
+    &__notifications-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+        color: var(--text-main);
+        margin-bottom: 16rem;
+    }
 
     &__notifications-list {
 
@@ -21,12 +113,39 @@
     }
 
     &__buttons {
-        .logout-btn {}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20rem 0;
+        .logout-btn, .discard-changes, .save-changes {
+            padding: 12rem 16rem;
+            border-radius: 8rem;
+            font-weight: 700;
+            font-size: 14rem;
+            line-height: 143%;
+            letter-spacing: 0.02em;
+        }
+
+        .logout-btn {
+            border: 1px solid var(--dark-orange);
+            color: var(--dark-orange);
+            background: var(--white);
+        }
+
         .changes-btn {
-            .discard-changes {}
-            .save-changes {}
+            display: flex;
+            align-items: center;
+            gap: 16rem;
+            .discard-changes {
+                border: 1px solid var(--text-third);
+                color: var(--text-third);
+                background: var(--white);
+            }
+            .save-changes {
+                box-shadow: 0 8px 20px 0 rgba(78, 96, 255, 0.16);
+                background: var(--blue);
+                color: var(--white);
+            }
         }
     }
-
-
 }

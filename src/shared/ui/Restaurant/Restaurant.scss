@@ -1,4 +1,7 @@
  .restaurant {
+    border: 1px solid var(--light-grey);
+    border-radius: 16rem;
+    background: var(--white);
 
     &__image {
         position: relative;
@@ -8,6 +11,8 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        border-top-left-radius: 16rem;
+        border-top-right-radius: 16rem;
 
         img {
             max-width: 100%;
@@ -19,21 +24,84 @@
             position: absolute;
             top: 0;
             right: 0;
+            padding: 8rem 16rem;
+            color: var(--white);
+            background: var(--blue);
+            border-radius: 0 16rem;
+            font-weight: 700;
+            font-size: 11rem;
+            line-height: 16rem;
+            letter-spacing: 0.6rem;
         }
     }
 
-    &__info {}
-
-    &__title {}
-
-    &__estim {
-
-        .delivery-time {}
-
-        .minimal-invoice {}
+    &__info {
+        padding: 16rem;
     }
 
-    &__kitchen {}
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 18rem;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+        color: var(--text-main);
+        margin-bottom: 6rem;
+    }
+
+    &__estim {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        margin-bottom: 14rem;
+        .delivery-time {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 6rem;
+            }
+        }
+
+        .blue-point {
+            width: 3rem;
+            height: 3rem;
+            background: var(--blue);
+            border-radius: 100%;
+        }
+
+        .delivery-time, .minimal-invoice {
+            font-weight: 600;
+            font-size: 12rem;
+            line-height: 133%;
+            color: var(--text-third);
+        }
+    }
+
+    &__kitchen {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+
+        .kitchen-item {
+            display: flex;
+            align-items: center;
+            gap: 8rem;
+            padding: 6rem 10rem;
+            border-radius: 100rem;
+            background: var(--light-grey);
+            max-width: 78rem;
+            font-weight: 600;
+            font-size: 12rem;
+            line-height: 133%;
+            color: var(--text-second);
+            img {
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+    }
 
 
  }
