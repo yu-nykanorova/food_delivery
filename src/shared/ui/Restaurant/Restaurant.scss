@@ -2,6 +2,14 @@
     border: 1px solid var(--light-grey);
     border-radius: 16rem;
     background: var(--white);
+    &:nth-child(2) {
+        .restaurant__title svg path {
+            stroke: var(--blue);
+        }
+        .restaurant__cart-counter {
+            display: flex;
+        }
+    }
 
     &__image {
         position: relative;
@@ -49,6 +57,25 @@
         letter-spacing: 0.01em;
         color: var(--text-main);
         margin-bottom: 6rem;
+        position: relative;
+    }
+
+    &__cart-counter {
+        display: none;
+        justify-content: center;
+        position: absolute;
+        top: -6rem;
+        right: -6rem;
+        width: 16rem;
+        height: 16rem; 
+        border: 1.50px solid var(--white);
+        border-radius: 6rem; 
+        background: var(--blue); 
+        font-weight: 700;
+        font-size: 10rem;
+        line-height: 140%;
+        text-align: center;
+        color: var(--white);    
     }
 
     &__estim {

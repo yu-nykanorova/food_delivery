@@ -5,7 +5,6 @@ import { Deal } from '../../shared/ui/Deal/Deal';
 import { deals } from '../../database/deals';
 import { Category } from '../../shared/ui/Category/Category';
 import { categories } from '../../database/categories';
-import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const listDeals = deals.map((deal) => (
@@ -14,16 +13,14 @@ export const Home = () => {
 
   const listCategories = categories.map((category) => (
     <Category key={category.id} category={category} />
-  ))
+  ));
 
   const listRestorants = restaurants.map((restaurant) => (
-    <Link key={restaurant.id} to="/">
-      <Restaurant restaurant={restaurant} />
-    </Link>
+    <Restaurant key={restaurant.id} restaurant={restaurant} />
     ));
   
   return (
-    <div className="home-container">
+    <div className="p30 home-container">
       <section className="deals">
         {listDeals}
       </section>

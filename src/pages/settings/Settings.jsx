@@ -5,14 +5,18 @@ import { Payments } from './components/Payments/Payments';
 import { Security } from './components/Security/Security';
 
 export const Settings = () => {
-  const [tab, setTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(1);
+  const handleClick = (tabIndex) => {
+    setActiveTab(tabIndex);
+  };
   const [title, setTitle] = useState("");
   return (
-    <div className="settings-container">
+    <div className="p30 settings-container">
       <div className="settings-title">Settings</div>
       <div className="settings-list">
         <div
-          onClick={() => setTab(1)} className="settings-item"
+          onClick={() => handleClick(1)}
+          className={`settings-item ${activeTab === 1 ? 'is-active-tab' : ""}`}
         >
           <div className="settings-item__ico">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +30,8 @@ export const Settings = () => {
           </div>
         </div>
         <div
-          className="settings-item"
-          onClick={() => setTab(2)}
+          onClick={() => handleClick(2)}
+          className={`settings-item ${activeTab === 2 ? 'is-active-tab' : ""}`}
         >
           <div className="settings-item__ico">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,8 +45,8 @@ export const Settings = () => {
           </div>
         </div>
         <div
-          className="settings-item"
-          onClick={() => setTab(3)}
+          onClick={() => handleClick(3)}
+          className={`settings-item ${activeTab === 3 ? 'is-active-tab' : ""}`}
         >
           <div className="settings-item__ico">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,8 +60,8 @@ export const Settings = () => {
           </div>
         </div>
         <div
-          className="settings-item"
-          onClick={() => setTab(4)}
+          onClick={() => handleClick(4)}
+          className={`settings-item ${activeTab === 4 ? 'is-active-tab' : ""}`}
         >
           <div className="settings-item__ico">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,10 +76,10 @@ export const Settings = () => {
       </div>
       <div className="settings-detail-title">{title}</div>
       <div className="settings-detail">
-        {tab === 1 && <Account setTitle={setTitle} />}
-        {tab === 2 && <Address setTitle={setTitle} />}
-        {tab === 3 && <Payments setTitle={setTitle} />}
-        {tab === 4 && <Security setTitle={setTitle} />}
+        {activeTab === 1 && <Account setTitle={setTitle} />}
+        {activeTab === 2 && <Address setTitle={setTitle} />}
+        {activeTab === 3 && <Payments setTitle={setTitle} />}
+        {activeTab === 4 && <Security setTitle={setTitle} />}
       </div>
     </div>
   )

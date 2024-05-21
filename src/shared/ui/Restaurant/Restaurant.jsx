@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 
 export const Restaurant = ({ restaurant }) => {
 
     return (
-        <div className="restaurant"> 
+        <Link to="/" className="restaurant"> 
             <div className="restaurant__image">
                 <img src={restaurant.image} alt={restaurant.title} />
                 {restaurant.isFeatured && <div className="featured">FEATURED</div>}
@@ -16,6 +17,7 @@ export const Restaurant = ({ restaurant }) => {
                         <path d="M2.5 5H17.5" stroke="#C7C8D2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M13.3333 8.33334C13.3333 9.2174 12.9821 10.0652 12.357 10.6904C11.7319 11.3155 10.884 11.6667 9.99999 11.6667C9.11593 11.6667 8.26809 11.3155 7.64297 10.6904C7.01785 10.0652 6.66666 9.2174 6.66666 8.33334" stroke="#C7C8D2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
+                    <div className="restaurant__cart-counter">2</div>
                 </div>
                 <div className="restaurant__estim">
                     <div className="delivery-time">
@@ -43,7 +45,7 @@ export const Restaurant = ({ restaurant }) => {
                     ))}                        
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

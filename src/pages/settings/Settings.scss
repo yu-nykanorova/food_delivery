@@ -1,6 +1,6 @@
 .settings-container {
     display: grid;
-    max-width: 1100rem;
+    max-width: calc(1100rem + 60rem);
     margin-inline: auto;
     grid-template-areas: 
         "settings-title settings-detail-title"
@@ -37,6 +37,21 @@
             border: 1px solid var(--light-grey);
             background: var(--white);
             cursor: pointer;
+            transition: var(--transition);
+            &:hover {
+                outline: 1px solid #697bff;
+                background: #f8f9ff;                
+            }
+            &.is-active-tab {
+                border: 2px solid var(--blue);
+                background: var(--light-blue);
+                .settings-item__ico {
+                    background: var(--blue);
+                    svg path {
+                        stroke: var(--white);
+                    }
+                }
+            }
             
             &__ico {
                 border-radius: 12rem;

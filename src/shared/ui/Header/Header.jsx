@@ -6,17 +6,19 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="header__logo">
-          <img src="/src/assets/logo.png" alt="logo" />
-        </Link>
-        <div className="header__search">
-          <input type="search" placeholder="Search" />
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#83859C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M14 14L11.1 11.1" stroke="#83859C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+        <div className="header__left-part">
+          <Link to="/" className="header__logo">
+            <img src="/src/assets/logo.png" alt="logo" />
+          </Link>
+          <div className="header__search">
+            <input type="search" placeholder="Search" />
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#83859C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M14 14L11.1 11.1" stroke="#83859C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </div>
-        <div className="header__menu">
+        <div className="header__right-part">
           <ul className="header__ul">
             <li className="header__li"><a href="/" className="header__a">Restaurants</a></li>
             <li className="header__li"><a href="/" className="header__a">Deals</a></li>

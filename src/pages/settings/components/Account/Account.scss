@@ -9,8 +9,6 @@
         margin-bottom: 16rem;
     }
 
-    &__avatar {} 
-
     &__avatar-title {
         font-weight: 600;
         font-size: 12px;
@@ -38,12 +36,22 @@
             padding: 12rem 16rem;
             color: var(--text-third);
             cursor: pointer;
+            border-radius: 8rem;
+            transition: var(--transition);
         }
         #change {
             margin-right: 15rem;
-            border: 1px solid var(--blue);
-            border-radius: 8rem;
+        }
+        #change:hover {
+            outline: 1px solid var(--blue);
             color: var(--blue);
+        }
+        #remove:hover {
+            outline: 1px solid var(--dark-orange);
+            color: var(--dark-orange);
+        }
+        #avatarInput {
+            display: none;
         }
     }
 

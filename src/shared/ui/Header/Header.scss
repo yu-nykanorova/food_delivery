@@ -2,25 +2,49 @@
     border-bottom: 1rem solid var(--light-grey);
 
     .header-container {
-        padding: 16rem 0;
+        padding: 16rem 30rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-     	max-width: 1100rem;
+     	max-width: calc(1100rem + 60rem);
         margin-inline: auto;
     }
 
+    &__left-part {
+        display: flex;
+        align-items: center;
+        gap: 48rem;
+    }
+
     &__logo {
-        margin-right: 48rem;
     }
 
     &__search {
-        margin-right: 370rem;
         display: flex;
         align-items: center;
+        padding: 12rem;
+        border-radius: 12rem;
+        background: var(--light-grey);
+
+        input {
+            outline: 0;
+            border: 0;
+            background: transparent;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 143%;
+                letter-spacing: 0.01em;
+                color: var(--text-third);                
+            }
+        }
+        svg {
+            cursor: pointer;
+        }
     }
 
-    &__menu {
+    &__right-part {
         display: flex;
         align-items: center;
     }
@@ -28,9 +52,25 @@
     &__ul {
         display: flex;
         align-items: center;
+        gap: 28rem;
+        margin-right: 24rem;
+        padding: 6rem 0;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            height: 34rem;
+            width: 1rem;
+            background: var(--light-grey);
+            position: absolute;
+            right: 86rem;
+            top: 0;
+        }
     }
 
-    &__li {}
+    &__li:last-child {
+            margin-left: 12rem;
+        }
 
     &__a {
         font-family: var(--font-family);
@@ -42,9 +82,43 @@
         color: var(--text-main);
     }
 
-    &__cart {}
+    &__cart {
+        position: relative;
+        display: flex;
+        background: var(--light-blue);
+        padding: 14rem;
+        border-radius: 16rem;
+        margin-right: 17rem;
+    }
 
-    &__cart-count {}
+    &__cart-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: var(--blue);
+        border-radius: 8rem;
+        padding: 4rem 7rem;
+        font-weight: 700;
+        font-size: 10rem;
+        color: var(--white);
+        top: -5rem;
+        right: -4rem;
+    }
 
-    &__avatar {}
+    &__avatar {
+        border-radius: 16rem;
+        width: 50rem;
+        height: 50rem;
+        border: 2px solid var(--light-grey);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            border-radius: 14rem;
+            width: 46rem;
+            height: 46rem;
+        }
+    }
 }
