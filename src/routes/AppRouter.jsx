@@ -20,7 +20,7 @@ export const AppRouter = () => {
         createRoutesFromElements(
             <Route path="/" element={<App loggedIn={loggedIn} />}>
                 <Route element={<GuestRoutes loggedIn={loggedIn} />}>
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
                 </Route>
                 <Route element={<PrivateRoutes loggedIn={loggedIn} />}>
                     <Route index path="/" element={<Home />} />

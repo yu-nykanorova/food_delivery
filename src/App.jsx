@@ -1,15 +1,22 @@
 import { Outlet } from 'react-router-dom'
 import PropTypes from "prop-types";
 import { Header } from "./shared/ui/Header/Header";
+import { Login } from './pages/login/Login';
 
-function App(loggedIn) {
+function App({ loggedIn }) {
   return (
-    <div className="container">
-      {loggedIn && <Header />}
-      <div className="page-wrapper">
-        <Outlet />
-      </div>
-    </div>
+    <>
+      {loggedIn ?
+        <Login />
+      :
+        <div className="container">
+          <Header />
+          <div className="page-wrapper">
+            <Outlet />
+          </div>
+        </div>
+      }
+    </>
   );
 }
 

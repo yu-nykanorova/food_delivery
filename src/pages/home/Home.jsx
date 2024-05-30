@@ -20,7 +20,7 @@ export const Home = () => {
     ));
   
   return (
-    <div className="p30 home-container">
+    <div className="home-container">
       <section className="deals">
         {listDeals}
       </section>

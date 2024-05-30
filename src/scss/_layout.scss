@@ -23,9 +23,11 @@ body {
 	height: 100%;
 }
 
-// .page-wrapper {
-// 	padding: 0 30rem;
-// }
+.page-wrapper {
+	max-width: 1110rem;
+ 	padding: 0 20rem;
+	margin-inline: auto;
+}
 
 .btn {
     cursor: pointer;
@@ -39,6 +41,3 @@ body {
 
 }
 
-.p30 {
-	padding: 0 30rem;
-}

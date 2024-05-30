@@ -1,6 +1,5 @@
 .home-container {
-    max-width: calc(1100rem + 60rem);
-    margin-inline: auto;
+    width: 1100rem;
 
     .deals {
         margin-top: 24rem;
@@ -17,7 +16,6 @@
     }
 
     .restaurants {
-        margin-bottom: 121rem;
         
         &__title {
             margin-bottom: 16rem;

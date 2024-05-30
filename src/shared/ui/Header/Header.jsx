@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Logo } from '../Logo/Logo';
 
 export const Header = () => {
-  const [counter] = useState(4)
+  const [counter] = useState(4);
   return (
     <header className="header">
       <div className="header-container">
         <div className="header__left-part">
-          <Link to="/" className="header__logo">
-            <img src="/src/assets/logo.png" alt="logo" />
-          </Link>
+          <Logo />
           <div className="header__search">
             <input type="search" placeholder="Search" />
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

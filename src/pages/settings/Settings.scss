@@ -1,27 +1,19 @@
 .settings-container {
-    display: grid;
-    max-width: calc(1100rem + 60rem);
-    margin-inline: auto;
-    grid-template-areas: 
-        "settings-title settings-detail-title"
-        "settings-list settings-detail";
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 30rem;
-    row-gap: 16rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 30rem;
     padding-top: 24rem;
 
     .settings-title {
-        grid-area: settings-title;
         font-weight: 600;
         font-size: 20rem;
         line-height: 140%;
         letter-spacing: 0.01em;
         color: var(--text-main);
+        margin-bottom: 16rem;
     }
 
     .settings-list {
-        grid-area: settings-list;
         width: 350rem;
         display: flex;
         flex-direction: column;
@@ -43,7 +35,7 @@
                 background: #f8f9ff;                
             }
             &.is-active-tab {
-                border: 2px solid var(--blue);
+                outline: 2px solid var(--blue);
                 background: var(--light-blue);
                 .settings-item__ico {
                     background: var(--blue);
@@ -88,15 +80,15 @@
     }
 
     .settings-detail-title {
-        grid-area: settings-detail-title;
         font-weight: 600;
         font-size: 20rem;
         line-height: 140%;
         letter-spacing: 0.01em;
         color: var(--text-main);
+        margin-bottom: 16rem;
     }
     .settings-detail {
-        grid-area: settings-detail;
+        width: 730rem;
         border: 1px solid var(--light-grey);
         border-radius: 16px;
         padding: 24rem 16rem 20rem;
