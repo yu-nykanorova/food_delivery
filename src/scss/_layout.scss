@@ -18,15 +18,14 @@ body {
 }
 
 .container {
-	display: grid;
-	grid-template-rows: auto 1fr;
-	height: 100%;
+	display: block;
+	max-width: 1440rem;
+	margin-inline: auto;
 }
 
 .page-wrapper {
-	max-width: 1110rem;
- 	padding: 0 20rem;
-	margin-inline: auto;
+	display: flex;
+	justify-content: center;
 }
 
 .btn {

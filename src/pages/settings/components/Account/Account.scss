@@ -7,6 +7,11 @@
         letter-spacing: 0.01em;
         color: var(--text-mains);
         margin-bottom: 16rem;
+        margin-left: 16rem;
+    }
+
+    &__avatar {
+        margin-left: 16rem;
     }
 
     &__avatar-title {
@@ -61,6 +66,7 @@
         align-items: center;
         gap: 16rem;
         margin-bottom: 34rem;
+        margin-left: 16rem;
     }
 
     &__first-name, &__last-name, &__email, &__phone {
@@ -99,6 +105,7 @@
         align-items: center;
         gap: 16rem;
         margin-bottom: 68rem;
+        margin-left: 16rem;
     }
 
     &__email {}
@@ -112,6 +119,7 @@
         letter-spacing: 0.01em;
         color: var(--text-main);
         margin-bottom: 16rem;
+        margin-left: 16rem;
     }
 
     &__notifications-list {
@@ -124,7 +132,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20rem 0;
+        padding: 20rem 16rem 0;
+        border-top: 1px solid var(--light-grey);
         .logout-btn, .discard-changes, .save-changes {
             padding: 12rem 16rem;
             border-radius: 8rem;

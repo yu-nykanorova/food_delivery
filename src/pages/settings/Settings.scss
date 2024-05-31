@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     gap: 30rem;
-    padding-top: 24rem;
+    padding: 24rem 0;
 
     .settings-title {
         font-weight: 600;
@@ -91,6 +91,6 @@
         width: 730rem;
         border: 1px solid var(--light-grey);
         border-radius: 16px;
-        padding: 24rem 16rem 20rem;
+        padding: 24rem 0 20rem;
     }
 }

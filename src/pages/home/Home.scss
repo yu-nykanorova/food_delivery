@@ -1,5 +1,6 @@
 .home-container {
     width: 1100rem;
+    height: 100%;
 
     .deals {
         margin-top: 24rem;
@@ -16,7 +17,7 @@
     }
 
     .restaurants {
-        
+        margin-bottom: 121rem;
         &__title {
             margin-bottom: 16rem;
             font-family: var(--font-family);

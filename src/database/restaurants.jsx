@@ -17,7 +17,6 @@ export const restaurants = [
         timeDelivery: "40-60",
         isFeatured: true,
         minInvoice: "24",
-        kitchen: ["Burger", "Pizza"],
         kitchen: [
             { emoji: "/src/assets/emoji/burger.png", name: "Burger" },
             { emoji: "/src/assets/emoji/pizza.png", name: "Pizza" },

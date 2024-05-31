@@ -15,7 +15,7 @@ import App from "../App";
 
 
 export const AppRouter = () => {
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(true);
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route path="/" element={<App loggedIn={loggedIn} />}>
@@ -24,7 +24,7 @@ export const AppRouter = () => {
                 </Route>
                 <Route element={<PrivateRoutes loggedIn={loggedIn} />}>
                     <Route index path="/" element={<Home />} />
-                    <Route path="/settings" element={<Settings />} />
+                    <Route path="/settings" element={<Settings setLoggedIn={setLoggedIn} />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Route>           

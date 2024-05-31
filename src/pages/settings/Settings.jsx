@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Account } from './components/Account/Account';
 import { Address } from './components/Address/Address';
 import { Payments } from './components/Payments/Payments';
 import { Security } from './components/Security/Security';
 
-export const Settings = () => {
+export const Settings = ({ setLoggedIn }) => {
   const [activeTab, setActiveTab] = useState(1);
   const handleClick = (tabIndex) => {
     setActiveTab(tabIndex);
@@ -79,7 +80,7 @@ export const Settings = () => {
       <div className="settings-detail-box">
         <div className="settings-detail-title">{title}</div>
         <div className="settings-detail">
-          {activeTab === 1 && <Account setTitle={setTitle} />}
+          {activeTab === 1 && <Account setTitle={setTitle} setLoggedIn={setLoggedIn} />}
           {activeTab === 2 && <Address setTitle={setTitle} />}
           {activeTab === 3 && <Payments setTitle={setTitle} />}
           {activeTab === 4 && <Security setTitle={setTitle} />}
@@ -87,4 +88,8 @@ export const Settings = () => {
       </div>
     </div>
   )
-}
+};
+
+Settings.propTypes = {
+  setLoggedIn: PropTypes.func.isRequired,
+};

@@ -1,8 +1,9 @@
 .login-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: space-between;
 
     .login {
+        max-width: 640rem;
         padding: 20rem 125rem 40rem 165rem;
         &__title {
             margin-top: 128rem;
@@ -11,34 +12,10 @@
         &__desc {
             margin-bottom: 32rem;
         }
-        &-form {
-            input {
-                border: 0;
-            }
-            .email-label, .password-label {
-                font-family: var(--font-family);
-                font-weight: 600;
-                font-size: 12rem;
-                line-height: 133%;
-                color: var(--text-second);
-                margin-bottom: 4rem;                
-            }
-            &__email {}
-    
-            &__pass {}
-    
-            &__checkbox {}
-    
-            &__checkbox-text {}
-    
-            &__btn {}
-    
-            &__forgot-password {}
-    
-            &__sign-up {}
+        &__forgot-password {
+            margin-bottom: 106rem;
         }
+        
+        &__sign-up {}
     }
-
-    .promo-section {}
-
 }

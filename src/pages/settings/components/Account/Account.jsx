@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-export const Account = ({ setTitle }) => {
-  React.useEffect(() => {
+export const Account = ({ setTitle, setLoggedIn }) => {
+  useEffect(() => {
     setTitle("Account");
   }, [setTitle]);
   const [avatar, setAvatar] = useState("/src/assets/img/avatar.png");
@@ -18,6 +19,11 @@ export const Account = ({ setTitle }) => {
   const handleRemoveAvatar = () => {
     setAvatar("");
   };
+  const handleLogout = (event) => {
+    event.preventDefault();
+    setLoggedIn(false);
+  };
+  
   return (
     <div className="account">
       <div className="account__title">Personal information</div>
@@ -52,7 +58,7 @@ export const Account = ({ setTitle }) => {
         <div className="notifications-list-right"></div>
       </div>
       <div className="account__buttons">
-        <button className="btn logout-btn">Log out</button>
+        <button className="btn logout-btn" onClick={handleLogout}>Log out</button>
         <div className="changes-btn">
           <button className="btn discard-changes">Discard changes</button>
           <button className="btn save-changes">Save changes</button>
@@ -60,4 +66,9 @@ export const Account = ({ setTitle }) => {
       </div>
     </div>
   )
-}
+};
+
+Account.propTypes = {
+  setTitle: PropTypes.func.isRequired,
+  setLoggedIn: PropTypes.func.isRequired,
+};

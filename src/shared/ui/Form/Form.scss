@@ -1,0 +1,35 @@
+.login-form {
+    margin-bottom: 28rem;
+    input {
+        border: 0;
+    }
+
+    .email-label, .password-label {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12rem;
+        line-height: 133%;
+        color: var(--text-second);
+        margin-bottom: 4rem;
+    }
+
+    &__email, &__pass {
+        padding-bottom: 20rem;
+    }
+    
+    &__email {}
+
+    &__pass {
+        margin-bottom: 8rem;
+    }
+
+    &__checkbox {}
+    
+    &__checkbox-text {
+        margin-bottom: 40rem;
+    }
+
+    &__btn {
+        padding: 12rem 16rem;
+    }
+}

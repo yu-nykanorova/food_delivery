@@ -1,4 +1,3 @@
-import React from 'react';
 import { Restaurant } from '../../shared/ui/Restaurant/Restaurant';
 import { restaurants } from '../../database/restaurants';
 import { Deal } from '../../shared/ui/Deal/Deal';
