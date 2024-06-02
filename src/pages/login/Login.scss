@@ -8,14 +8,42 @@
         &__title {
             margin-top: 128rem;
             margin-bottom: 16rem;
+            font-weight: 700;
+            font-size: 60rem;
+            line-height: 137%;
+            color: var(--text-main);
         }
         &__desc {
             margin-bottom: 32rem;
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 143%;
+            letter-spacing: 0.01em;
+            color: var(--text-second);
         }
         &__forgot-password {
             margin-bottom: 106rem;
+            font-weight: 700;
+            font-size: 14rem;
+            line-height: 143%;
+            letter-spacing: 0.02em;
+            color: var(--blue);
+            text-align: center;
+            cursor: pointer;
         }
-        
-        &__sign-up {}
+        &__sign-up {
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 143%;
+            letter-spacing: 0.01em;
+            text-align: center;
+            color: var(--text-second);
+            span {
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                color: var(--blue);
+                cursor: pointer;
+            }
+        }
     }
 }

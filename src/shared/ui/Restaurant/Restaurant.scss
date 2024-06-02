@@ -2,6 +2,7 @@
     border: 1px solid var(--light-grey);
     border-radius: 16rem;
     background: var(--white);
+    transition: var(--transition);
     &:nth-child(2) {
         .restaurant__title svg path {
             stroke: var(--blue);
@@ -9,6 +10,10 @@
         .restaurant__cart-counter {
             display: flex;
         }
+    }
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8rem 15rem 0 rgba(78, 96, 255, 0.16);
     }
 
     &__image {

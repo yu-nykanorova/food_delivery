@@ -18,16 +18,18 @@
     }
 
     &__logo {
+        display: flex;
     }
 
     &__search {
         display: flex;
         align-items: center;
-        padding: 12rem;
+        padding: 10rem;
         border-radius: 12rem;
         background: var(--light-grey);
 
         input {
+            display: flex;
             outline: 0;
             border: 0;
             background: transparent;
@@ -90,6 +92,11 @@
         padding: 14rem;
         border-radius: 16rem;
         margin-right: 17rem;
+        cursor: pointer;
+        transition: var(--transition);
+        &:hover {
+            transform: scale(1.07);
+        }
     }
 
     &__cart-count {
@@ -116,6 +123,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: var(--transition);
+        &:hover {
+            transform: scale(1.07);
+        }
         img {
             border-radius: 14rem;
             width: 46rem;

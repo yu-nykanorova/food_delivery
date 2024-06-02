@@ -5,6 +5,10 @@
     align-items: center;
     border-radius: 16rem;
     background: var(--light-blue);
+    transition: var(--transition);
+    &:hover {
+        transform: scale(1.02);
+    }
 
     &__image {
         display: flex;

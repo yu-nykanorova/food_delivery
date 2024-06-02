@@ -1,0 +1,6 @@
+.header__logo {
+    transition: var(--transition);
+    &:hover {
+        transform: scale(1.03);
+    }
+}
