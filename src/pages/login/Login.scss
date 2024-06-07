@@ -1,10 +1,24 @@
 .login-container {
     display: flex;
     justify-content: space-between;
+    max-height: 1000rem;
+    @include mobile {
+		flex: 100%;
+	}
 
     .login {
         max-width: 640rem;
         padding: 20rem 125rem 40rem 165rem;
+        @include desktop-small {
+            padding: 20rem 85rem 30rem 100rem;
+        }
+        @include tablet {
+            padding-inline: 70rem;
+            flex: 100%;
+        }
+        @include mobile {
+            padding: 20rem 15rem 32rem;
+        }
         &__title {
             margin-top: 128rem;
             margin-bottom: 16rem;
@@ -12,7 +26,14 @@
             font-size: 60rem;
             line-height: 137%;
             color: var(--text-main);
+            @include tablet {
+                margin-top: 80rem;
+            }
+            @include mobile {
+                margin-top: 60rem;
+            }
         }
+        
         &__desc {
             margin-bottom: 32rem;
             font-weight: 400;
@@ -30,6 +51,12 @@
             color: var(--blue);
             text-align: center;
             cursor: pointer;
+            @include tablet {
+                margin-bottom: 90rem;
+            }
+            @include mobile {
+                margin-bottom: 134rem;
+            }
         }
         &__sign-up {
             font-weight: 400;

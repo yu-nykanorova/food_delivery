@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Eye } from '../../icons/Eye';
+import { Checkbox } from '../../ui/Checkbox/Checkbox';
 
 export const Form = ({ setLoggedIn }) => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ export const Form = ({ setLoggedIn }) => {
     event.preventDefault();
     setErrors({});
     const newErrors = {};
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if(!emailPattern.test(email)) {
       newErrors.email = "Enter correct email";
     }
@@ -61,13 +62,7 @@ export const Form = ({ setLoggedIn }) => {
         />
         <Eye handleTogglePasswordVisibility={handleTogglePasswordVisibility} />
       </div>
-      <label htmlFor="loginCheckbox" className="checkbox-label">
-        <input type="checkbox" id="loginCheckbox"/>
-        <div className="login-form__custom-checkbox">
-          <div className="checkbox"></div>
-          <div className="checkbox-text">Keep me logged in</div>
-        </div>
-      </label>
+      <Checkbox className="loginCheckbox" defaultChecked={false} label="Keep me logged in" />
       <button type="submit" className="btn login-form__btn">Login</button>
     </form>
   )

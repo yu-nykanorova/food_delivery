@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Checkbox } from '../../../../shared/ui/Checkbox/Checkbox';
 
 export const Account = ({ setTitle, setLoggedIn }) => {
   useEffect(() => {
@@ -54,8 +55,16 @@ export const Account = ({ setTitle, setLoggedIn }) => {
       </div>
       <div className="account__notifications-title">Email notifications</div>
       <div className="account__notifications-list">
-        <div className="notifications-list-left"></div>
-        <div className="notifications-list-right"></div>
+        <div className="notifications-list-left">
+          <Checkbox defaultChecked={true} label="New deals" idValue="1" />
+          <Checkbox defaultChecked={true} label="New restaurants" idValue="2" />
+          <Checkbox defaultChecked={true} label="Order statuses" idValue="3" />
+        </div>
+        <div className="notifications-list-right">
+          <Checkbox defaultChecked={true} label="Password changes" idValue="4" />
+          <Checkbox defaultChecked={true} label="Special offers" idValue="5" />
+          <Checkbox defaultChecked={true} label="Newsletter" idValue="6" />
+        </div>
       </div>
       <div className="account__buttons">
         <button className="btn logout-btn" onClick={handleLogout}>Log out</button>

@@ -1,0 +1,35 @@
+.header__search {
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+    border-radius: 12rem;
+    background: var(--light-grey);
+    position: relative;
+
+    .search-info {
+        position: absolute;
+        top: -15rem;
+        color: var(--dark-orange);
+        font-weight: 600;
+        font-size: 12rem;
+    }
+
+    input {
+        display: flex;
+        outline: 0;
+        border: 0;
+        background: transparent;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 143%;
+            letter-spacing: 0.01em;
+            color: var(--text-third);                
+        }
+    }
+    svg {
+        cursor: pointer;
+    }
+}
+

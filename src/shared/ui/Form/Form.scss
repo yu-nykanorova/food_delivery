@@ -50,49 +50,9 @@
         margin-bottom: 28rem;
     }
 
-    #loginCheckbox {
-        display: none;
-    }
-
-    #loginCheckbox:checked ~ .login-form__custom-checkbox .checkbox::after {
-        display: block;
-    }
-
-    &__custom-checkbox {
-        margin-bottom: 40rem;
+    .loginCheckbox {
         margin-top: 8rem;
-        display: flex;
-        align-items: center;
-        gap: 12rem;
-        cursor: pointer;
-
-        .checkbox {
-            width: 20rem;
-            height: 20rem;
-            border: 2px solid #c7c8d2;
-            border-radius: 4rem;
-            position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                display: none;
-                left: 5rem;
-                top: 1rem;
-                width: 5rem;
-                height: 10rem;
-                border: solid var(--blue);
-                border-width: 0 2rem 2rem 0;
-                transform: rotate(45deg);                
-            }
-        }
-        .checkbox-text {
-            font-weight: 400;
-            font-size: 14rem;
-            line-height: 143%;
-            letter-spacing: 0.01em;
-            color: var(--text-main);             
-        }
+        margin-bottom: 40rem;
     }
 
     &__btn {

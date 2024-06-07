@@ -1,6 +1,7 @@
 //scss
 @import "scss/reset";
 @import "scss/vars";
+@import "scss/mixins";
 @import "scss/layout";
 
 //shared
@@ -9,8 +10,11 @@
 @import "shared/ui/Deal/Deal.scss";
 @import "shared/ui/Category/Category.scss";
 @import "shared/ui/Promo/Promo.scss";
+@import "shared/ui/Search/Search.scss";
 @import "shared/ui/Form/Form.scss";
 @import "shared/ui/Logo/Logo.scss";
+@import "shared/ui/Burger/Burger.scss";
+@import "shared/ui/Checkbox/Checkbox.scss";
 
 @import "shared/icons/Eye.scss";
 

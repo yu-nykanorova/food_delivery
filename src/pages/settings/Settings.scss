@@ -1,8 +1,26 @@
 .settings-container {
+    width: 1100rem;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     gap: 30rem;
     padding: 24rem 0;
+    @include tablet-small {
+        flex-direction: column;  
+    }
+
+    .settings-box {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 32%;
+        @include tablet-small {
+            flex: 100%;
+            padding: 0 20rem;
+        }
+        @include mobile {
+            padding: 0;
+        }
+    }
 
     .settings-title {
         font-weight: 600;
@@ -14,10 +32,15 @@
     }
 
     .settings-list {
-        width: 350rem;
         display: flex;
         flex-direction: column;
         gap: 12rem;
+
+        @include tablet-small {
+            // gap: 16rem;
+            // flex: 100%;
+            // width: 100%;
+        }
 
         .settings-item {
             display: flex;
@@ -79,6 +102,17 @@
         }
     }
 
+    .settings-detail-box {
+        flex: 0 0 65%;
+        @include tablet-small {
+            flex: 100%;
+            padding: 0 20rem;
+        }
+        @include mobile {
+            padding: 0;
+        }
+    }
+
     .settings-detail-title {
         font-weight: 600;
         font-size: 20rem;
@@ -88,7 +122,6 @@
         margin-bottom: 16rem;
     }
     .settings-detail {
-        width: 730rem;
         border: 1px solid var(--light-grey);
         border-radius: 16px;
         padding: 24rem 0 20rem;

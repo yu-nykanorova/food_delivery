@@ -1,0 +1,53 @@
+.header__burger {
+    display: none;
+    padding: 14rem;
+    background: var(--light-grey);
+    position: relative;
+    margin-left: 16rem;
+    width: 44rem;
+    height: 44rem;
+    border-radius: 16rem;
+    cursor: pointer;
+    @include tablet-small {
+        display: block;
+    }
+    &::before {
+        content: "";
+        display: block;
+        height: 34rem;
+        width: 1rem;
+        border-radius: 2rem;
+        background: var(--light-grey);
+        position: absolute;
+        left: -16rem;
+        top: 5rem;
+    }
+    .burger {
+        width: 16rem;
+        height: 16rem;
+        padding: 3rem 1rem;
+        position: relative;
+        span {
+            position: absolute;
+            width: 14rem;
+            height: 1.5rem;
+            background: var(--text-third);
+            top: 8rem;
+            border-radius: 2rem;
+        }
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            width: 14rem;
+            height: 1.5rem;
+            background: var(--text-third);
+            border-radius: 2rem;
+        }
+        &::before {
+            top: 3rem;
+        }
+        &::after {
+            bottom: 3rem;
+        }
+    }
+}

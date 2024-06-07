@@ -21,11 +21,14 @@ body {
 	display: block;
 	max-width: 1440rem;
 	margin-inline: auto;
+	height: 100%;
 }
 
 .page-wrapper {
 	display: flex;
 	justify-content: center;
+	height: 100%;
+	padding: 0 15rem;
 }
 
 .btn {

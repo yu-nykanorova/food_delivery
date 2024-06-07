@@ -7,6 +7,7 @@
         margin-bottom: 32rem;
         display: flex;
         justify-content: space-between;
+        gap: 10rem;
     }
 
     .categories {
@@ -14,6 +15,9 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40rem;
+        @include tablet {
+            
+        }
     }
 
     .restaurants {
@@ -32,6 +36,13 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(340rem, 1fr));
             gap: 30rem;
+            @include desktop-small {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+                gap: 20rem;
+            }
         }
      }
 }
