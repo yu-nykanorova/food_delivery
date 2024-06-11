@@ -1,21 +1,54 @@
 .deal {
-    padding: 0 26rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 16rem;
+    flex: calc(50% - 5rem);
     background: var(--light-blue);
     transition: var(--transition);
+    @include tablet {
+        justify-content: space-evenly;
+    }
+    @include mobile {
+        flex-direction: column-reverse;
+    }
     &:hover {
         transform: scale(1.02);
     }
 
     &__image {
         display: flex;
-        align-items: flex-end;
+        align-self: stretch;
+        @include tablet {
+            align-self: flex-end;
+        }
+        @include tablet {
+            align-self: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
-    &__info {}
+    &__info {
+        padding: 24rem 24rem 16rem 0;
+        @include tablet {
+            padding-right: 10rem;
+        }
+        @include mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 16rem 16rem 0;
+            width: 100%;
+        }
+    }
+
+    &__info-subcontainer {
+        
+    }
 
     &__title {
         font-weight: 600;
@@ -24,6 +57,13 @@
         letter-spacing: 0.01em;
         color: var(--text-main);
         margin-bottom: 8rem;
+        @include tablet {
+            white-space: nowrap;
+            font-size: 18rem;
+        }
+        @include tablet-small {
+            font-size: 20rem;
+        }
     }
 
     &__discount {
@@ -32,6 +72,15 @@
         line-height: 140%;
         color: var(--blue);
         margin-bottom: 36rem;
+        @include tablet {
+            font-size: 21rem;
+        }
+        @include tablet-small {
+            font-size: 40rem;
+        }
+        @include mobile {
+            margin: 0;
+        }
     }
 
     &__category {

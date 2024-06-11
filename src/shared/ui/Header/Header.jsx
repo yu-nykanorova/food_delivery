@@ -6,6 +6,10 @@ import { Burger } from '../Burger/Burger';
 
 export const Header = () => {
   const [counter] = useState(4);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleBurgerClick = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <header className="header">
       <div className="header-container">
@@ -14,7 +18,7 @@ export const Header = () => {
           <Search className="header__search-container" />
         </div>
         <div className="header__right-part">
-          <ul className="header__ul">
+          <ul className={`header__ul ${menuOpen ? "header__ul--open" : ""}`}>
             <li className="header__li"><a href="/" className="header__a">Restaurants</a></li>
             <li className="header__li"><a href="/" className="header__a">Deals</a></li>
             <li className="header__li"><a href="/" className="header__a">My orders</a></li>
@@ -33,7 +37,7 @@ export const Header = () => {
           <Link to="/settings" className="header__avatar">
             <img src="/src/assets/img/avatar.png" alt="avatar" />
           </Link>
-          <Burger />
+          <Burger className="header__burger--active" onClick={handleBurgerClick} />
         </div>
       </div>
     </header>

@@ -10,6 +10,7 @@
     cursor: pointer;
     @include tablet-small {
         display: block;
+        background: transparent;
     }
     &::before {
         content: "";

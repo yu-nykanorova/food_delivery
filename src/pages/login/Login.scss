@@ -13,11 +13,14 @@
             padding: 20rem 85rem 30rem 100rem;
         }
         @include tablet {
-            padding-inline: 70rem;
+            padding-inline: 50rem;
             flex: 100%;
         }
         @include mobile {
-            padding: 20rem 15rem 32rem;
+            padding: 20rem 0;
+        }
+        &__logo {
+            justify-content: flex-start;
         }
         &__title {
             margin-top: 128rem;

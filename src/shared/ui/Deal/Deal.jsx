@@ -8,8 +8,10 @@ export const Deal = ({deal}) => {
                 <img src={deal.image} alt={deal.title} />
             </div>
             <div className="deal__info">
-                <div className="deal__title">{deal.title}</div>
-                <div className="deal__discount">{deal.discount}</div>
+                <div className="deal__info-subcontainer">
+                    <div className="deal__title">{deal.title}</div>
+                    <div className="deal__discount">{deal.discount}</div>
+                </div>
                 <div className="deal__category">{deal.category}</div>
             </div>
         </Link>

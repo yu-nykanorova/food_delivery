@@ -15,6 +15,9 @@ body {
 	font-family: var(--font-family);
 	background: var(--white);
 	color: var(--black);
+	&.lock {
+		overflow: hidden;
+	}
 }
 
 .container {

@@ -9,7 +9,7 @@ export const Login = ({ setLoggedIn }) => {
   return (
     <div className="login-container">
       <div className="login">
-        <Logo />
+        <Logo className="login__logo" />
         <div className="login__title">Login</div>
         <p className="login__desc">Sign in with your data that you entered during your registration.</p>
         <Form setLoggedIn={setLoggedIn} />

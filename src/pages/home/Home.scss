@@ -8,15 +8,25 @@
         display: flex;
         justify-content: space-between;
         gap: 10rem;
+        @include tablet-small {
+            flex-direction: column;
+        }
+        @include mobile {
+            gap: 30rem;
+        }
     }
 
     .categories {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 30rem;
         margin-bottom: 40rem;
         @include tablet {
-            
+            gap: 15rem;
+        }
+        @include tablet-small {
+            flex-wrap: wrap;
         }
     }
 
@@ -42,6 +52,10 @@
             @include tablet {
                 grid-template-columns: 1fr 1fr;
                 gap: 20rem;
+            }
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 30rem;
             }
         }
      }
