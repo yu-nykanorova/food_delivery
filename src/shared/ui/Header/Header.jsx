@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, eseEffect, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from '../Logo/Logo';
 import { Search } from '../Search/Search';
@@ -10,6 +10,21 @@ export const Header = () => {
   const handleBurgerClick = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleClickOutside = (event) => {
+    if (!event.target.closest(".header__burger") && !event.target.closest(".header__ul")) {
+      setMenuOpen(false);
+    }
+  };
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("lock");
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.body.classList.remove("lock");
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuOpen]);
+  
   return (
     <header className="header">
       <div className="header-container">
