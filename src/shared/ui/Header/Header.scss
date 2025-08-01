@@ -167,6 +167,8 @@
     right: 10rem;
     transition: var(--transition);
     z-index: 6;
+    background-color: transparent;
+
     &::before {
         display: none;
     }

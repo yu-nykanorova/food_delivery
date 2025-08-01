@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Checkbox } from '../../../../shared/ui/Checkbox/Checkbox';
+import avatarPerson from '../../../../assets/img/avatar.png';
+import avatarDefault from '../../../../assets/img/avatar-default.svg';
 
 export const Account = ({ setTitle, setLoggedIn }) => {
   useEffect(() => {
     setTitle("Account");
   }, [setTitle]);
-  const [avatar, setAvatar] = useState("/src/assets/img/avatar.png");
+  const [avatar, setAvatar] = useState(avatarPerson);
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -31,7 +33,7 @@ export const Account = ({ setTitle, setLoggedIn }) => {
       <div className="account__avatar">
         <p className="account__avatar-title">Avatar</p>
         <div className="account__avatar-data">
-          <img src={avatar || "/src/assets/img/avatar-default.svg"} alt="avatar" />
+          <img src={avatar || avatarDefault} alt="avatar" />
           <div id="change" onClick={() => document.getElementById("avatarInput").click()}>Change</div>
           <div id="remove" onClick={handleRemoveAvatar}>Remove</div>
           <input type="file" id="avatarInput" accept="image/*" onChange={handleFileChange} />

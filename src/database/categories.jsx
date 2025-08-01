@@ -1,32 +1,39 @@
+import pizza from '../assets/emoji/pizza.png';
+import burger from '../assets/emoji/burger.png';
+import meat from '../assets/emoji/meat.png';
+import sushi from '../assets/emoji/sushi.png';
+import broccoli from '../assets/emoji/broccoli.png';
+import cupcake from '../assets/emoji/cupcake.png';
+
 export const categories = [
     {
         id: 1,
         title: "Pizza",
-        image: "/src/assets/emoji/pizza.png",
+        image: pizza,
     },
     {
         id: 2,
         title: "Burger",
-        image: "/src/assets/emoji/burger.png",
+        image: burger,
     },
     {
         id: 3,
         title: "BBQ",
-        image: "/src/assets/emoji/meat.png",
+        image: meat,
     },
     {
         id: 4,
         title: "Sushi",
-        image: "/src/assets/emoji/sushi.png",
+        image: sushi,
     },
     {
         id: 5,
         title: "Vegan",
-        image: "/src/assets/emoji/broccoli.png",
+        image: broccoli,
     },
     {
         id: 6,
         title: "Desserts",
-        image: "/src/assets/emoji/cupcake.png",
+        image: cupcake,
     },
 ]

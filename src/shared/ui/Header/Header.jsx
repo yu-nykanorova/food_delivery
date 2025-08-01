@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Logo } from '../Logo/Logo';
 import { Search } from '../Search/Search';
 import { Burger } from '../Burger/Burger';
+import avatar from '../../../assets/img/avatar.png';
 
 export const Header = () => {
   const [counter] = useState(4);
@@ -50,7 +51,7 @@ export const Header = () => {
             </div>
           </div>
           <Link to="/settings" className="header__avatar">
-            <img src="/src/assets/img/avatar.png" alt="avatar" />
+            <img src={ avatar } alt="avatar" />
           </Link>
           <Burger className="header__burger--active" onClick={handleBurgerClick} />
         </div>
