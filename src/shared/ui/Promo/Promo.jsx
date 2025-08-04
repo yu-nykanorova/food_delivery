@@ -1,7 +1,9 @@
+import promoPoster from '../../../assets/img/promo.jpg';
+
 export const Promo = () => {
   return (
     <div className="promo-section">
-        <img src="/src/assets/img/promo.jpg" alt="promo poster" />
+        <img src={ promoPoster } alt="promo poster" />
     </div>
   )
 }

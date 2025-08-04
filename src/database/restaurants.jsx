@@ -4,9 +4,16 @@ import ninjaSushi from '../assets/img/ninja_sushi.png';
 import sushiMaster from '../assets/img/sushi_master.png';
 import japaneseSushi from '../assets/img/japanese_sushi.png';
 import kobe from '../assets/img/kobe.png';
+import bestDesserts from '../assets/img/best_desserts.png';
+import vehanFood from '../assets/img/vehan_food.png';
+import lovePizza from '../assets/img/love_pizza.png';
+import bbqOne from '../assets/img/bbq_one.png';
 import sushi from '../assets/emoji/sushi.png';
 import burger from '../assets/emoji/burger.png';
 import pizza from '../assets/emoji/pizza.png';
+import broccoli from '../assets/emoji/broccoli.png';
+import cupcake from '../assets/emoji/cupcake.png';
+import meat from '../assets/emoji/meat.png';
 
 export const restaurants = [
     {
@@ -74,6 +81,50 @@ export const restaurants = [
         minInvoice: "57",
         kitchen: [
             { emoji: sushi, name: "Sushi" },
+        ],
+    },
+    {
+        id: 7,
+        title: "Best desserts",
+        image: bestDesserts,
+        timeDelivery: "20-30",
+        isFeatured: false,
+        minInvoice: "100",
+        kitchen: [
+            { emoji: cupcake, name: "Desserts" },
+        ],
+    },
+    {
+        id: 8,
+        title: "Vehan Food",
+        image: vehanFood,
+        timeDelivery: "20-30",
+        isFeatured: false,
+        minInvoice: "150",
+        kitchen: [
+            { emoji: broccoli, name: "Vegan" },
+        ],
+    },
+    {
+        id: 9,
+        title: "Love Pizza",
+        image: lovePizza,
+        timeDelivery: "20-30",
+        isFeatured: false,
+        minInvoice: "70",
+        kitchen: [
+            { emoji: pizza, name: "Pizza" },
+        ],
+    },
+    {
+        id: 10,
+        title: "BBQ One",
+        image: bbqOne,
+        timeDelivery: "20-30",
+        isFeatured: false,
+        minInvoice: "107",
+        kitchen: [
+            { emoji: meat, name: "BBQ" },
         ],
     },
 ]

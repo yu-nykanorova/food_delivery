@@ -9,10 +9,6 @@
     border-radius: 16rem;
     cursor: pointer;
 
-    // &--active {
-    //     background-color: transparent;
-    // }
-
     @include tablet-small {
         display: block;
     }
